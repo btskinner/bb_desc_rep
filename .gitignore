@@ -1,0 +1,45 @@
+# .gitignore
+
+# -------------
+# general
+# -------------
+
+# ignore all files starting with underscore
+_*
+
+# -------------
+# TeX
+# -------------
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fff
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*..synctex.gz
+*.toc
+*.ttt
+
+# -------------
+# R
+# -------------
+*.Rhistory
+*.Rproj
+
+# -------------
+# compiled
+# -------------
+*.o
+
+# -------------
+# MacOS
+# -------------
+*.DS_Store
