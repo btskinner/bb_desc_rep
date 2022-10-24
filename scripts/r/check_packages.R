@@ -19,6 +19,7 @@ req_packages <- c("tidyverse",
                   "cmdstanr",
                   "crosswalkr",
                   "patchwork",
+                  "rstan",
                   "xtable")
 
 ## packages that are not installed
