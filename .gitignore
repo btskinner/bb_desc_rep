@@ -7,6 +7,13 @@
 # ignore all files starting with underscore
 _*
 
+data/clean/*.RDS
+data/ipums/*.dta
+estimates/*.csv
+!/scripts/stan/mrp.stan
+scripts/stan/*
+
+
 # -------------
 # TeX
 # -------------

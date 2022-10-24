@@ -41,6 +41,9 @@ cpi <- read_csv(file.path(ipm_dir, "USACPIALLAINMEI.csv"),
 ## Sample
 ## ------
 ##
+## 2013 ACS     1.0%
+## 2014 ACS     1.0%
+## 2015 ACS     1.0%
 ## 2016 ACS     1.0%
 ## 2017 ACS     1.0%
 ## 2018 ACS     1.0%
@@ -95,7 +98,7 @@ cpi <- read_csv(file.path(ipm_dir, "USACPIALLAINMEI.csv"),
 ## P    FTOTINC     Total family income
 ## P    POVERTY     Poverty status
 
-df <- read_dta(file.path(ipm_dir, "ipums_raw.dta"),
+df <- read_dta(file.path(ipm_dir, "usa_00007.dta"),
                ## drop variables we don't need to reduce size
                col_select = !any_of(c("cbserial",
                                       "serial",
@@ -241,7 +244,7 @@ saveRDS(df, file.path(cln_dir, "ipums_analysis.RDS"))
 ## make crosswalks
 ## -----------------------------------------------------------------------------
 
-df <- read_dta(file.path(ipm_dir, "ipums_raw.dta"),
+df <- read_dta(file.path(ipm_dir, "usa_00007.dta"),
                ## only race/ethnicity variables for crosswalk
                col_select = any_of(c("race", "raced", "hispan", "hispand")))
 
@@ -264,6 +267,7 @@ raced <- df |>
          label = gsub("Aian", "AI/AN", label),
          label = gsub(" Pi,", " PI,", label),
          label = gsub(" Pi", " PI", label),
+         label = gsub("PIma", "Pima", label),
          label = gsub("Write_in", "(W.I.)", label),
          label = gsub(", N\\.s", " (N.S.)", label),
          label = gsub(", N\\.e\\.c", " (N.E.C.)", label),
