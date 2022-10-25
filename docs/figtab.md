@@ -16,6 +16,7 @@ date: |
   | <br>
 geometry: margin=1in
 fontsize: 12pt
+resource-path: ['..','figures']
 figPrefix:
   - "Figure"
   - "Figures"

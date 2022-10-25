@@ -23,12 +23,11 @@ ipums := $(DAT_DIR)/ipums/ipums_raw.dta
 analysis_data := $(DAT_DIR)/clean/ipums_analysis.RDS
 
 # output vars (one example: assumes one change is all change)
-pred_output := $(EST_DIR)/mrp_broadband_pred.RDS
-post_output := $(EST_DIR)/national_post.RDS
+pred_output := $(DAT_DIR)/clean/mrp_broadband_pred.RDS
+post_output := $(DAT_DIR)/clean/national_post.RDS
 fig_output := $(FIG_DIR)/stcomp.pdf
 tab_output := $(TAB_DIR)/overall.tex
-doc_figtab_output := $(DOC_DIR)/figtab.md
-doc_paper_output := $(DOC_DIR)/paper.md
+doc_figtab_output := figtab.pdf
 
 # --- build targets ------------------------------
 
@@ -38,7 +37,7 @@ data: $(analysis_data)
 analysis: $(pred_output)
 figures: $(fig_output)
 tables: $(tab_output)
-docs: $(doc_figtab_output) $(doc_paper_output)
+docs: $(doc_figtab_output)
 
 .PHONY: all setup data analysis figures tables docs
 
@@ -78,32 +77,12 @@ $(tab_output): $(SCR_DIR)/r/make_tables.R $(post_output)
 
 $(doc_figtab_output): $(fig_output) $(tab_output)
 	@echo "Compiling figures and tables document"
-	pandoc \
+	cd docs && pandoc $(@:.pdf=.md) \
 		--read=markdown \
 		--write=latex \
 		--output=$@ \
-		--filter=pandoc-crossref \
-		--citeproc \
-		--lua-filter=linebreaks.lua
-
-$(doc_paper_output): $(fig_output) $(tab_output)
-	@echo "Compiling paper"
-	pandoc \
-		--read=markdown \
-		--write=latex \
-		--output=$@ \
-		--filter=pandoc-crossref \
-		--citeproc \
-		--lua-filter=linebreaks.lua
-
-# --- clean up -----------------------------------
-
-clean:
-	@echo "Cleaning up directory"
-	$(RM) -r $(EST_DIR)/*.csv
-	$(RM) -r $(DAT_DIR)/clean/*.RDS
-	$(RM) -r $(TAB_DIR)/*.tex
-	$(RM) -r $(FIG_DIR)/*.pdf
+		--lua-filter=linebreaks.lua \
+		--resource-path=..:figures
 
 # ------------------------------------------------------------------------------
 # end makefile

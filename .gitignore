@@ -12,7 +12,9 @@ data/ipums/*.dta
 estimates/*.csv
 !/scripts/stan/mrp.stan
 scripts/stan/*
-
+tables/*.tex
+figures/*.pdf
+docs/*.pdf
 
 # -------------
 # TeX
