@@ -11,7 +11,7 @@ author:
   - Hazel Levy<br>University of Florida
 date: | 
   | <br>
-  | 22 October 2022
+  | 25 October 2022
   | <br>
   | <br>
 geometry: margin=1in
@@ -61,44 +61,53 @@ horizontal dashed line and shaded area show the national median and
 ![Race/ethnicity comparison of in-home broadband access (left panel)
 and access only through a cellular data plan (right panel). Numbers on
 the _y_-axis correspond to U.S. Census codes and can be linked the
-names given by the census in Appendix
-@tbl:overall.](../figures/recomp.pdf){#fig:recomp}
+names given by the census as well as specific posterior values in
+Appendix @tbl:overall. See Appendix tables [-@tbl:men] and
+[-@tbl:women] for further disaggregation for men and women by
+racial/ethnic group,
+respectively.](../figures/recomp.pdf){#fig:recomp}
 
 ![In-home broadband access (top panel) and access only through a
 cellular plan (bottom panel) for American Indian / Alaska Native
 populations. The horizontal dashed line and shaded area represent the
 overall median / 95% credible interval for this population. The
 horizontal dotted line and shaded area represent the national median /
-95% credible interval.](../figures/aiak_mf_disagg.pdf){#fig:aiak}
+95% credible interval. Refer to Appendix tables [-@tbl:men] and
+[-@tbl:women] for specific
+values.](../figures/aiak_mf_disagg.pdf){#fig:aiak}
 
 ![In-home broadband access (top panel) and access only through a
 cellular plan (bottom panel) for Asian populations. The horizontal
 dashed line and shaded area represent the overall median / 95%
 credible interval for this population. The horizontal dotted line and
 shaded area represent the national median / 95% credible
-interval.](../figures/asian_mf_disagg.pdf){#fig:asian}
+interval. Refer to Appendix tables [-@tbl:men] and [-@tbl:women] for
+specific values.](../figures/asian_mf_disagg.pdf){#fig:asian}
 
 ![In-home broadband access (top panel) and access only through a
 cellular plan (bottom panel) for multiracial/multiethnic populations
 typically designated as _other_. The horizontal dashed line and shaded
 area represent the overall median / 95% credible interval for this
 population. The horizontal dotted line and shaded area represent the
-national median / 95% credible
-interval.](../figures/other_mf_disagg_slides.pdf){#fig:mult}
+national median / 95% credible interval. Refer to Appendix tables
+[-@tbl:men] and [-@tbl:women] for specific
+values.](../figures/other_mf_disagg_slides.pdf){#fig:mult}
 
 ![In-home broadband access among Hispanic populations across
 California, Florida, and Texas. The horizontal dashed line and shaded
 area represent the overall median / 95% credible interval for this
 population. The horizontal dotted line and shaded area represent the
 national median / 95% credible
-interval.](../figures/bb_h_st.pdf){#fig:bbhst}
+interval. Refer to Appendix [@tbl:hispbb] for specific
+values.](../figures/bb_h_st.pdf){#fig:bbhst}
 
 ![Broadband access only through a cellular plan among Hispanic
 populations across California, Florida, and Texas. The horizontal
 dashed line and shaded area represent the overall median / 95%
 credible interval for this population. The horizontal dotted line and
 shaded area represent the national median / 95% credible
-interval.](../figures/do_h_st.pdf){#fig:dohst} 
+interval. Refer to Appendix [@tbl:hispdo] for specific
+values.](../figures/do_h_st.pdf){#fig:dohst} 
 
 \processdelayedfloats
 \appendix

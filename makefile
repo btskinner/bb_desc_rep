@@ -81,6 +81,7 @@ $(doc_figtab_output): $(fig_output) $(tab_output)
 		--read=markdown \
 		--write=latex \
 		--output=$@ \
+		--filter=pandoc-crossref \
 		--lua-filter=linebreaks.lua \
 		--resource-path=..:figures
 
