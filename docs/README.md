@@ -1,23 +1,11 @@
 # Documents
 
-The final paper, `paper.md`, can be built after running all
-scripts by running:
+Figures and tables found in the final paper can be built from
+`figtab.md` after completing all scripts and running from the `docs`
+directory:
 
 ``` sh
-pandoc \
---read=markdown \
---write=latex \
---output=./paper.pdf \
---filter=pandoc-crossref \
---citeproc \
---lua-filter=linebreaks.lua
-```
-
-For a shorter document of just figures and tables,
-`tabfig.md` can be compiled instead.
-
-``` sh
-pandoc \
+pandoc figtab.md \
 --read=markdown \
 --write=latex \
 --output=./figtab.pdf \
