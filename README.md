@@ -1,8 +1,8 @@
 This repository contains the replication files for  
 
-> Skinner, B.T., Burtch, T.M., and Levy, H. (2022). Variation in
+> Skinner, B.T., Burtch, T., and Levy, H. (2022). Variation in
 > broadband access among undergraduate populations across the United
-> States 
+> States. _Annenberg Institute at Brown University_ (EdWorkingPaper: 22-667). Doi: [10.26300/8a57-0r97](https://doi.org/10.26300/8a57-0r97) 
 
 
 ## To run
